@@ -1,4 +1,4 @@
-# fxgl-runtime
+# javafx-runtime
 A Custom FXGL runtime in different operating systems e.g. macOSX, using jlink command.  
 It will use Github Action to build custom runtime of FXGL, Kotlin, JavaFX and JDK.  
    

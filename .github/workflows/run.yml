@@ -23,11 +23,12 @@ jobs:
         run: jlink --strip-debug --compress 1 --no-header-files --no-man-pages --output jre --add-modules java.base,java.desktop,java.instrument,java.logging,java.prefs,jdk.unsupported
       - name: Show Path
         run: pwd
-      - name: LS
-        run: ls
-        
+      - name: Tar
+        run: tar -zcvf jre
+      - name: Chmod
+        run: chmod 777 jre.tar.gz jre
       - uses: actions/upload-artifact@v2
         with:
           name: macosxrt
-          path: /Users/runner/work/fxgl-runtime/fxgl-runtime/target/app.zip
+          path: /Users/runner/work/fxgl-runtime/fxgl-runtime/jre.tar.gz
           retention-days: 1

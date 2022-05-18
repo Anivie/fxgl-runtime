@@ -24,7 +24,7 @@ jobs:
       - name: Show Path
         run: pwd
       - name: Tar
-        run: tar -zcvf jre
+        run: tar -zcvf jre.tar.gz jre
       - name: Chmod
         run: chmod 777 jre.tar.gz jre
       - uses: actions/upload-artifact@v2
